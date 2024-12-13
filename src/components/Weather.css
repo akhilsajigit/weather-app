@@ -5,7 +5,8 @@
   place-self: center;
   padding: 40px;
   border-radius: 10px;
-  background-image: linear-gradient(to bottom, rgb(42, 176, 228), rgb(0, 153, 255));
+  /* background-image: linear-gradient(to bottom, rgb(42, 176, 228), rgb(0, 153, 255)); */
+  background-image: linear-gradient(to bottom, rgb(147, 42, 228), rgb(147, 42, 228));
   display: flex;
   flex-direction: column;
   align-items: center;
