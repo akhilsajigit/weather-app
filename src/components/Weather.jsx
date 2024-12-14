@@ -56,6 +56,7 @@ const Weather = () => {
         windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
+        description:data.weather[0].description,
         icon: icon
       })
     } catch (error) {
@@ -66,7 +67,7 @@ const Weather = () => {
   }
 
   useEffect(()=>{
-    search("Idukki")
+    search("United States")
   },[])
 
 
@@ -79,6 +80,7 @@ const Weather = () => {
         <img src={search_icon} alt="" onClick={()=>search(inputRef.current.value)}/>
       </div>
       {weatherData?<>
+        <p className='description' >{weatherData.description}</p>
         <img src={weatherData.icon} className='weather-icon' alt="" />
         <p className='temprature' >{weatherData.temperature}°c</p>
         <p className='location' >{weatherData.location}</p>
